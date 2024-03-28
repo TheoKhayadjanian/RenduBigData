@@ -5,8 +5,8 @@ class CompteurTags(MRJob):
 
     def steps(self):
         return [
-            MRStep(mapper=self.mapper_get_tags,
-                   reducer=self.reducer_count_tags)
+            MRStep(mapper=self.Mapping,
+                   reducer=self.Reduce)
         ]
 
     def Mapping(self, _, line):
